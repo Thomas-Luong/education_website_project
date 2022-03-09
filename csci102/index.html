@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="csci102" ng-controller="main">
+    <head>
+        <meta charset="UTF-8">
+
+		<title>Western Tech | {{ title }}</title>
+		
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Michroma">
+        <link rel="stylesheet" href="main.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-route.min.js"></script>
+        <script src="app.js"></script>
+        <script src="js/contact.js"></script>
+        <link rel="icon" href="img/vikingdrawing.jpg" type="image/jpg" sizes="16x16">
+    </head>
+
+    <body>
+        <div class="WT-wrapper">
+            <header>
+                <div class="WT-container">
+                    <nav>
+                        <ul class="WT-nav__main">
+                            <li><a ng-click="navigate('/news')">News</a></li>
+                            <li><a ng-click="navigate('/calendar')">Calendar</a></li>
+                            <li><a ng-click="navigate('/studentlife')">Student Life</a></li>
+                            <li><a ng-click="navigate('/faq')">FAQ</a></li>
+                            <li><a ng-click="navigate('/sitemap')">Sitemap</a></li>
+                        </ul>
+                    </nav>
+
+                    <span class="WT-logo"></span>
+
+                    <div class="WT-banner">
+                        <div class="WT-banner__text">
+                            <h1>Western Tech</h1>
+                            <span>Find the latest and greatest in tech news!</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <div class="WT-container">
+                    <ul class="WT-nav__secondary">
+                        <li ng-class="{ 'active' : isActive('/') }"><a ng-click="navigate('/')">Home</a></li>
+                        <li ng-class="{ 'active' : isActive('/features') }"><a ng-click="navigate('/features')">Featured</a></li>
+                        <li ng-class="{ 'active' : isActive('/events') }"><a ng-click="navigate('/events')">Events</a></li>
+                        <li ng-class="{ 'active' : isActive('/contact') }"><a ng-click="navigate('/contact')">Contact</a></li>
+                        <li ng-class="{ 'active' : isActive('/about') }"><a ng-click="navigate('/about')">About</a></li>
+                    </ul>
+                </div>
+
+                <div ng-view></div>
+            </main>
+
+            <footer>
+                Western Tech 2019
+				
+				<br>
+				
+				<small><a href="https://wwu.edu/">wwu.edu</a></small>
+            </footer>
+    </body>
+</html>

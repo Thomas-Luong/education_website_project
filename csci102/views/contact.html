@@ -1,0 +1,57 @@
+<div class="WT-container">
+    <div class="WT-row">
+        <div class="WT-top-widget">
+            <h2>Contact Us</h2>
+            <h4>
+                Thank you for taking the time to contact Western Front. <br>
+                Please provide the following information so we can direct <br>
+                 your message to the correct department.
+
+            </h4>
+            <form method="post" action="http://webdevbasics.net/scripts/javajam8.php" ng-controller="contact as form" ng-submit="form.onSubmit ($event)">
+                <label for="Name">
+					Your Name: 
+					<div class="WT-form-error-message" ng-if="form.errors.name">
+						{{ form.errors.name }}
+					</div>
+				</label> <input type="text" name="myName" id="name" ng-class="{'WT-form-error': form.errors.name }" ng-model="form.name" required> <br> <br>
+                <label for="E-Mail">Your E-mail: </label><input type="email" name="myE-mail" id="E-Mail" required> <br><br>
+                <label for="Message">
+					Compose Message: 
+					
+					<div class="WT-form-error-message" ng-if="form.errors.message">
+						{{ form.errors.message }}
+					</div>
+				</label><br><textarea id="message" name="myMessage" rows="2" cols="20" ng-class="{'WT-form-error': form.errors.message }" ng-model="form.message" required></textarea>  <br>
+                
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+      
+        <div class="row">
+            <div class="column">
+                <h2>Contact the Editors</h2> <h4>We would love to hear from you!<br>Contact your local
+                Western Times Editors.</h4>
+                 <p>  
+                    &nbsp;&nbsp;&ensp;Rose Koch, <a href="email_fake.html">kochr2@wwu.edu.</a><br>
+                    <br>
+
+                    &nbsp;&nbsp;&ensp;Raymond Kober, <a href="email_fake.html">koberr@wwu.edu. </a> <br>
+                    &nbsp;&nbsp;&ensp;Senior Photographer<br>
+                    <br>
+
+                    &nbsp;&nbsp;&ensp;Trevor Marcus, <a href="email_fake.html">marcust2@wwu.edu.</a><br>
+                    <br>
+
+                    &nbsp;&nbsp;&ensp;Justin Holmes, <a href="email_fake.html">holmesj7@wwu.edu.</a><br>
+                    <br>
+
+                    &nbsp;&nbsp;&ensp;Thomas Luong, <a href="email_fake.html">luongt2@wwu.edu.</a><br>
+                </p>
+
+                <h2>Come see us on campus!</h2>
+                <h4>&nbsp;&nbsp;&ensp;516 High St<br> &nbsp;&nbsp;&ensp;Bellingham, WA 98225.</h4>
+            </div>
+        </div>
+    </div>
+</div>
